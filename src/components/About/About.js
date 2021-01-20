@@ -14,6 +14,8 @@ const About = (props) => {
                     <h6>Coming soon</h6>
                     <p>- More characters</p>
                     <p>- Locations</p>
+                    <hr style={{borderTop: '3px double white'}}></hr>
+                    <p style={{fontStyle: 'italic'}}>This website uses material from the <a style={{color: '#FFA69E'}} href='https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki'>Game of Thrones wiki</a> at <a style={{color: '#FFA69E'}} href='https://www.fandom.com/'>Fandom</a> and is licensed under the <a style={{color: '#FFA69E'}} href='https://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Attribution-Share Alike License</a>.</p>
                 </div>
             </Container>
     )
