@@ -19,6 +19,16 @@ class Seasons extends Component {
             console.log(err);
         })
     }
+
+    componentDidUpdate() {
+        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/seasons.json')
+        .then(res => {
+            this.setState({seasons: res.data, isLoading: false})
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
     
     render() {
         let seasonsList = null

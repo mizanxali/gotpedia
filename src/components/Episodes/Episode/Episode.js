@@ -15,10 +15,17 @@ class Episodes extends Component {
     componentDidMount() {
         axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/episodes/season' + this.props.seasonNumber + '.json')
         .then(res => {
-            // console.log(this.state.episode);
-            // console.log(res.data);
             this.setState({episode: res.data[this.props.episodeNumber-1], isLoading: false});
-            // console.log(this.props);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
+    componentDidUpdate() {
+        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/episodes/season' + this.props.seasonNumber + '.json')
+        .then(res => {
+            this.setState({episode: res.data[this.props.episodeNumber-1], isLoading: false});
         })
         .catch(err => {
             console.log(err);

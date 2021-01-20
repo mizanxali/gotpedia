@@ -6,7 +6,7 @@ const NavigationBar = (props) => {
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
             <Container>
-                <Navbar.Brand href="/" style={{fontFamily: 'Game of Thrones'}}>GOTPEDIA</Navbar.Brand>
+                <Navbar.Brand eventKey='home' as={NavLink} to="/" style={{fontFamily: 'Game of Thrones'}}>GOTPEDIA</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" style={{fontFamily: 'Merriweather'}}>
                     <Nav className="mr-auto">
