@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container, CardDeck } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import CharactersCard from './CharactersCard/CharactersCard'
 import Spinner from '../UI/Spinner/Spinner'
 

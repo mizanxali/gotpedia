@@ -27,7 +27,7 @@ class Character extends Component {
 
         if(this.state.character) {
             content = (
-                <Container>
+                <Container className='content'>
                     <h1 style={{fontFamily: 'Game of Thrones', marginTop: '80px'}}>{this.state.character.name}</h1>
                     <Image src={require('../../../assets/characters/'+this.state.character.name+'.png')} fluid style={{width: '50%', border: '1px solid white', borderRadius: '5px'}} />
                     {/* <Image src={require('../../../assets/characters/Cersei Lannister.png')} fluid /> */}
@@ -35,7 +35,7 @@ class Character extends Component {
                     <table>
                         <tbody>
                             {this.state.character.status ? <tr><th>Status</th><td>{this.state.character.status}</td></tr> : null}
-                            {this.state.character.affiliation ? <tr><th>affiliation</th><td>{this.state.character.affiliation}</td></tr> : null}
+                            {this.state.character.affiliation ? <tr><th>Affiliation</th><td>{this.state.character.affiliation}</td></tr> : null}
                             {this.state.character.father ? <tr><th>Father</th><td>{this.state.character.father.map((item, i) => <li key={item}>{item}</li>)}</td></tr> : null}
                             {this.state.character.mother ? <tr><th>Mother</th><td>{this.state.character.mother}</td></tr> : null}
                             {this.state.character.siblings ? <tr><th>Sibling(s)</th><td>{this.state.character.siblings.map((item, i) => <li key={item}>{item}</li>)}</td></tr> : null}
