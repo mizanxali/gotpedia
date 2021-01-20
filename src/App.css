@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Game of Thrones';
+  src: url('./assets/gotfont/GameofThrones.eot');
+  src: url('./assets/gotfont/GameofThrones.eot?#iefix') format('embedded-opentype'),
+      url('./assets/gotfont/GameofThrones.woff2') format('woff2'),
+      url('./assets/gotfont/GameofThrones.woff') format('woff'),
+      url('./assets/gotfont/GameofThrones.svg#GameofThrones') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.App {
+  text-align: center;
+  margin-top: 55px;
+}
+
+Button a {
+  color: white;
+}
+
+Button:hover a {
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  margin: 20px 10px;
+  font-family: 'Merriweather', serif;
+  font-size: 13px;
+}
+
+@media (min-width: 500px) {
+  .content {
+      font-size: 17px;
+  }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+.season-episode-number {
+    color: #C0D6DF;
+    margin-top: 80px;
+}
+
+.next-previous-buttons-holder {
+    margin: 15px;
+}
+
+.episode-links {
+    color: #FFA69E;
+    text-decoration: none;
+}
+
+.episode-links:hover {
+    color: #AA4465;
+    text-decoration: none;
+}
+
+.seasons-and-episodes-links {
+    display: block;
+    color: #FFA69E;
+    text-decoration: none;
+}
+
+.seasons-and-episodes-links:hover {
+    color: #AA4465;
+    text-decoration: none;
+}
+
+
+.episode-name {
+    font-family: Game of Thrones;
+    margin-top: 20px;
+}
+
+Button:hover {
+    background-color: #FFA69E;
+}

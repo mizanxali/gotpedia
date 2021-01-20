@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+body {
+  background-color: #25283d;
+  color: white;
+}
+
+.season-episode-links {
+    display: block;
+    color: #FFA69E;
+    text-decoration: none;
+}
+
+.season-episode-links:hover {
+    color: #AA4465;
+}
+
+.cover {
+    position: relative;
+    height: 100vh;
+}
+
+.coverimage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 70%;
+}
+
+.covertext {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-family: Game of Thrones;
+    font-size: 7vw;
+    text-shadow: 2px 2px 4px #000000;
+}

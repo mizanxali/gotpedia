@@ -1,0 +1,18 @@
+table, th, td {
+    border: 1px solid #AA4465;
+    color: #FFA69E;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 75%;
+}
+
+th,td {
+    padding: 10px;
+}
+
+table li {
+    list-style-type: none;
+}
