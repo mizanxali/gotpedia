@@ -6,6 +6,9 @@
 # database
 /data
 
+# firebase_project_url
+/src/firebase.js
+
 # testing
 /coverage
 

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { CardDeck, Container } from 'react-bootstrap';
 import HousesCard from './HousesCard/HousesCard';
 import Spinner from  '../UI/Spinner/Spinner'
+import FIREBASE_PROJECT_URL from '../../firebase'
 
 class Houses extends Component {
     state = {
@@ -11,7 +12,7 @@ class Houses extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/houses.json')
+        axios.get(FIREBASE_PROJECT_URL + '/houses.json')
         .then(res => {
             // console.log(res.data);
             this.setState({houses: res.data, isLoading: false})

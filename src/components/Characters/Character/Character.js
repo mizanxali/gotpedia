@@ -4,6 +4,7 @@ import Spinner from '../../UI/Spinner/Spinner'
 import { Image, Container } from 'react-bootstrap'
 import { Fade } from 'react-reveal'
 import './Character.css'
+import FIREBASE_PROJECT_URL from '../../../firebase'
 
 class Character extends Component {
     state = {
@@ -12,7 +13,7 @@ class Character extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/characters/' + this.props.characterNumber + '.json')
+        axios.get(FIREBASE_PROJECT_URL + '/characters/' + this.props.characterNumber + '.json')
         .then(res => {
             this.setState({character: res.data, isLoading: false})
             // console.log(this.state.character);

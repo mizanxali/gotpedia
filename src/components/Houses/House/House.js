@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Image, Container } from 'react-bootstrap'
 import Spinner from '../../UI/Spinner/Spinner'
 import { Fade } from 'react-reveal'
+import FIREBASE_PROJECT_URL from '../../../firebase'
 
 class House extends Component {
     state = {
@@ -11,7 +12,7 @@ class House extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/houses/' + this.props.houseNumber + '.json')
+        axios.get(FIREBASE_PROJECT_URL + '/houses/' + this.props.houseNumber + '.json')
         .then(res => {
             this.setState({house: res.data, isLoading: false})
             // console.log(this.state.house);

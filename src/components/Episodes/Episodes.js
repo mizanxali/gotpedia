@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Spinner from '../UI/Spinner/Spinner'
+import FIREBASE_PROJECT_URL from '../../firebase'
 
 class Episodes extends Component {
 
@@ -12,7 +13,7 @@ class Episodes extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/seasons.json')
+        axios.get(FIREBASE_PROJECT_URL + '/seasons.json')
         .then(res => {
             this.setState({seasons: res.data, isLoading: false})
             // console.log(this.state.seasons);

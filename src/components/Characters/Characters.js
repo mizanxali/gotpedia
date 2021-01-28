@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Container, CardDeck } from 'react-bootstrap'
 import CharactersCard from './CharactersCard/CharactersCard'
 import Spinner from '../UI/Spinner/Spinner'
+import FIREBASE_PROJECT_URL from '../../firebase'
 
 class Characters extends Component {
     state = {
@@ -12,7 +13,7 @@ class Characters extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/characters.json')
+        axios.get(FIREBASE_PROJECT_URL + '/characters.json')
         .then(res => {
             // console.log(res.data);
             this.setState({characters: res.data, numberOfCharacters: res.data.length, isLoading: false})

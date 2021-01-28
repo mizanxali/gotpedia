@@ -5,6 +5,7 @@ import axios from 'axios'
 import Spinner from '../../UI/Spinner/Spinner'
 import { Container, Button, Image } from 'react-bootstrap'
 import { Fade } from 'react-reveal'
+import FIREBASE_PROJECT_URL from '../../../firebase'
 
 class Episodes extends Component {
     state = {
@@ -13,17 +14,15 @@ class Episodes extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/episodes/season' + this.props.seasonNumber + '.json')
-        .then(res => {
-            this.setState({episode: res.data[this.props.episodeNumber-1], isLoading: false});
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        this.fetchEpisode()
     }
 
     componentDidUpdate() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/episodes/season' + this.props.seasonNumber + '.json')
+        this.fetchEpisode()
+    }
+
+    fetchEpisode = () => {
+        axios.get(FIREBASE_PROJECT_URL + '/episodes/season' + this.props.seasonNumber + '.json')
         .then(res => {
             this.setState({episode: res.data[this.props.episodeNumber-1], isLoading: false});
         })

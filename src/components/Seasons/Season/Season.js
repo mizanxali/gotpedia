@@ -6,6 +6,7 @@ import './Season.css'
 import Spinner from '../../UI/Spinner/Spinner'
 import { Image, Container, Button } from 'react-bootstrap'
 import { Fade } from 'react-reveal';
+import FIREBASE_PROJECT_URL from '../../../firebase'
 
 
 class Season extends Component {
@@ -15,7 +16,7 @@ class Season extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/seasons/season' + this.props.seasonNumber + '.json')
+        axios.get(FIREBASE_PROJECT_URL + '/seasons/season' + this.props.seasonNumber + '.json')
         .then(res => {
             this.setState({season: res.data, isLoading: false})
         })

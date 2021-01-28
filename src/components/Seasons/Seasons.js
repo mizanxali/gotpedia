@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Spinner from '../UI/Spinner/Spinner'
+import FIREBASE_PROJECT_URL from '../../firebase'
 
 class Seasons extends Component {
     state = {
@@ -11,17 +12,15 @@ class Seasons extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/seasons.json')
-        .then(res => {
-            this.setState({seasons: res.data, isLoading: false})
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        this.fetchSeason()
     }
 
     componentDidUpdate() {
-        axios.get('https://gotpedia-e49a3-default-rtdb.firebaseio.com/seasons.json')
+        this.fetchSeason()
+    }
+
+    fetchSeason = () => {
+        axios.get(FIREBASE_PROJECT_URL + '/seasons.json')
         .then(res => {
             this.setState({seasons: res.data, isLoading: false})
         })
